@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "en US">
+<head>
+	<meta charset = "utf-8">
+	<meta name = "author" content = "Evita">
+</head>
+
+<body>
+
+<h1> Pizza Guys Order Form </h1>
+
+<img src = "pizza.jpg" width = "300px" title = " pizza">
+
+
+<form id = "myForm" method = "" action = "#">
+	<p> Name </p>
+	<input type = "text" placeholder = "Evita" name = "name" required>
+	<p> Address </p>
+	<input type = "text" placeholder="N0.123 XXX St." name = "address" required>
+	<p> Phone </p>
+	<input type = "tel" placeholder="123-123-1234" name = "phone" pattern = "\d\d\d-\d\d\d-\d\d\d\d">
+	
+	<p> Pizza size </p>
+	<input type = "radio" name = "size" value = "Large" id = "Large"> Large
+	<input type = "radio" name = "size" value = "Medium" id = "Medium"> Medium
+	<input type = "radio" name = "size" value = "Small" id = "Small"> Small
+
+	<p> Pizza Toppings </p>
+	<input type = "checkbox" name = "toppings" value = "Sausage" > Sausage
+	<input type = "checkbox" name = "toppings" value = "Pepperoni" > Pepperoni
+	<input type = "checkbox" name = "toppings" value = "Olives" > Olives
+	<input type = "checkbox" name = "toppings" value = "Onions" > Onions
+
+	<p> 
+	<input type = "submit" value = "Place Order" onclick = "return validate()">
+	<input type = "reset" value = "Clear">
+	</p>
+
+</form>
+</body>
+
+<script>
+function validate(){
+	var name = document.forms["myForm"]["name"].value;
+	var add = document.forms["myForm"]["address"].value;
+	var phone = document.forms["myForm"]["phone"].value;
+	var large = document.getElementById("Large").checked;
+	var medium = document.getElementById("Medium").checked;
+	var small = document.getElementById("Small").checked;
+
+	if(name == null || name == ""){
+		window.alert("please enter your name");
+		return false;
+
+	}
+	if(add == null || add == ""){
+		window.alert("please enter your address");
+		return false;
+
+	}
+	if(phone == null || phone == ""){
+		window.alert("please enter your phone number");
+		return false;
+
+	}
+	if(!large  && !medium && !small){
+		window.alert("please pick a size");
+		return false;
+	}
+	return true;
+
+}
+</script>
+</html>
