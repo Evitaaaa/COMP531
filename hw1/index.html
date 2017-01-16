@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 
-<html lang = "en-US">
+<html lang="en-US">
 	<head>
-		<meta charset = "utf - 8">
-		<meta name = "author" content = "Evita">
+		<title> Sign Up Page </title>
+		<meta charset="utf - 8">
+		<meta name="author" content="Evita">
+		<meta name="keywords" content="HTML, JAVASCRIPT">
+		<meta name="description" content="Sign Up Page">
 	</head>
 
-	<body onload = "getTimestamp()">
+	<body onload="getTimestamp()">
 		<h1> Sign Up </h1>
 
-		<form id = "myForm" method = ("GET") action = "formProcessor.html">
+		<form id="myForm" method=("GET") action="formProcessor.html">
 
 			<p> Account Name (<em> Account name can only be upper or lower case letters and numbers, but may not start with a number </em>) : </p> 
-			<input type = "text" placeholder = "Account name" name = "acname" pattern = "^[A-Za-z][A-Za-z0-9]*$" required>
+			<input type="text" placeholder="Account name" name="acname" pattern="^[A-Za-z][A-Za-z0-9]*$" required>
 			
 			<p> Display Name (optional): </p> 
-			<input type = "text" placeholder = "Display Name" name = "dname">
+			<input type="text" placeholder="Display Name" name="dname">
 			
 			<p> Email Address: </p>
-			<input type = "text" placeholder = "e.g. ab12@rice.edu" name = email pattern = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.]+\.[A-Za-z]{2,3}$" required>
+			<input type="text" placeholder="e.g. ab12@rice.edu" name="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.]+\.[A-Za-z]{2,3}$" required>
 
 			<p> Phone Number: </p>
-			<input type = "tel" placeholder = "123-123-1234" name = phone pattern = "\d\d\d-\d\d\d-\d\d\d\d" required>
+			<input type="tel" placeholder="123-123-1234" name="phone" pattern="\d\d\d-\d\d\d-\d\d\d\d" required>
 
 			<p> Date Of Birth: </p>
-			<input type = "date" name = "bday" required>
+			<input type="date" name="bday" id="bday" required>
 
 			<p> Zipcode: </p>
-			<input type = "text" placeholder = "12345" name = "zipcode" pattern = "[0-9]{5}" required>
+			<input type="text" placeholder="12345" name="zipcode" pattern="[0-9]{5}" required>
 
 			<p> Password: </p>
-			<input type = "text" placeholder = "Password" name = "password" required>
+			<input type="text" placeholder="Password" name="password" id="passwordId" required>
 
 			<p> Password Confirmation </p>
-			<input type = "text" placeholder = "Enter your password again" name = "cpassword" required>
+			<input type="text" placeholder="Repeat your password" name="cpassword" id="cpasswordId" required>
 
-			<p><input type = "hidden" name = "timestamp"> </p>
+			<p><input type="hidden" name="timestamp" id="timestamp"> </p>
 
-			<p> <input type = "reset" value = "Clear"> 
-			    <input type = "submit" value = "Submit" onclick = "return validate()">
+			<p> <input type="reset" value="Clear"> 
+			    <input type="submit" value="Submit" onclick="return validate()">
 
 			</p>
 
@@ -48,11 +51,12 @@
 	</body>
 	<script type="text/javascript">
 		function getTimestamp(){
-			document.forms["myForm"]["timestamp"].value = new Date().getTime();
+			document.getElementById("timestamp").value = new Date().getTime();
 		}
 
 		function validate(){
-			var bday = new Date(document.forms["myForm"]["bday"].value);
+
+			var bday = new Date(document.getElementById("bday").value);
 			var today = new Date();
 			var years = today.getFullYear() - bday.getFullYear();
 			var months = today.getMonth() - bday.getMonth();
@@ -62,13 +66,12 @@
 				return false;
 			}
 
-			var password1 = document.forms["myForm"]["password"].value;
-			var password2 = document.forms["myForm"]["cpassword"].value;
+			var password1 = document.getElementById("passwordId").value;
+			var password2 = document.getElementById("cpasswordId").value;
 			if (password1 != password2){
 				window.alert("Two passwords are not same");
 				return false;
 			}
-
 			return true;
 
 		}
