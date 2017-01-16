@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang = "en-US">
+	<head>
+		<meta charset = "utf - 8">
+		<meta name = "author" content = "Evita">
+	</head>
+
+	<body onload = "getInfo()">
+		<h1> Registration Information </h1>
+		
+		<table border = "1">
+			<tr>
+				<td> Acoount Name </td>
+				<td id = "acname"></td>
+			</tr>
+			
+			<tr>
+				<td> Display Name </td>
+				<td id = "dname"></td>
+			</tr>
+			
+			<tr>
+				<td> Email Address </td>
+				<td id = "email"></td>
+			</tr>
+
+			<tr>
+				<td> Phone Number </td>
+				<td id = "phone"></td>
+			</tr>
+
+			<tr>
+				<td> Date Of Birth </td>
+				<td id = "bday"></td>
+			</tr>
+
+			<tr>
+				<td> Zipcode </td>
+				<td id = "zipcode"></td>
+			</tr>
+
+			<tr>
+				<td> Password </td>
+				<td id = "password"></td>
+			</tr>
+
+			<tr>
+				<td> Password Confirmation </td>
+				<td id = "password2"></td>
+			</tr>
+
+			<tr>
+				<td> Timestamp </td>
+				<td id = "timestamp"></td>
+			</tr>
+
+
+
+		</table>
+
+	</body>
+
+	<script type="text/javascript">
+		function getInfo(){
+			var allInfo = location.search.substring(1).split("&");
+			
+			for(var i = 0; i < allInfo.length; i++){
+				allInfo[i] = allInfo[i].split("=")[1];
+			}
+			
+			document.getElementById("acname").innerHTML = allInfo[0];
+			document.getElementById("dname").innerHTML = allInfo[1];
+			document.getElementById("email").innerHTML = allInfo[2].replace(/%40/,"@");
+			document.getElementById("phone").innerHTML = allInfo[3];
+			document.getElementById("bday").innerHTML = allInfo[4];
+			document.getElementById("zipcode").innerHTML = allInfo[5];
+			document.getElementById("password").innerHTML = allInfo[6];
+			document.getElementById("password2").innerHTML = allInfo[7];
+			document.getElementById("timestamp").innerHTML = new Date(Number(allInfo[8]));
+
+		}
+	</script>
+
+</html>
