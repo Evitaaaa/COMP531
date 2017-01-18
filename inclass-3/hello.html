@@ -1,0 +1,70 @@
+<! DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Sign Up Page </title>
+	<meta charset="utf - 8">
+	<meta name="author" content="Evita">
+	<meta name="keywords" content="HTML, JAVASCRIPT">
+	<meta name="description" content="Sign Up Page">
+</head>
+
+<body onload="Start()">
+
+
+	<h1> Greeting from Evita </h1>
+	<p> This <b>Evita Yan</b> @ Rice </p>
+	<p> I just came back from China where I spent my winter vacation</p>
+
+	<br/>
+	<img src="selfie.jpg" width="100px">
+	<p> Go here for more information about me from <a href = "https://www.facebook.com/profile.php?id=100007738965328"> FB</a> </p>
+	
+	<p> Got something to say to me? </p>
+	<p> Leave a message here </p>
+	<textarea rows="5" cols="70" id="text"> 
+	</textarea>
+	<br/>
+	<p>Countdown Clock: <span id="indicator" style="color:blue">15</span> s left</p>
+
+	<button type="button" >Submit</button>
+	<button type="button" onclick="clearAll()">Clear</button>
+	<button type="button" onclick="pause()">Pause</button>
+	<button type="button" onclick="resume()">Resume</button>
+
+
+</body>
+
+<script type="text/javascript">
+
+	var curTime = 15;
+	var inter = setInterval(countDown, 1000);
+
+
+	function clearAll(){
+		document.getElementById("text").value = "";
+	}
+
+	function Start(){
+		setTimeout(function(){window.alert("the page will redirect when the counter reaches zero");}, 5000);
+	}
+
+	function countDown(){
+			curTime--;
+			document.getElementById("indicator").innerHTML = curTime;
+			if(curTime <= 0){
+				clearInterval(inter);
+				window.location.href = "http://www.clear.rice.edu/comp431/sample/hello.html";
+			}
+	}
+
+	function pause(){
+		clearInterval(inter);
+	}
+
+	function resume(){
+		setInterval(countDown, 1000);
+	}
+
+</script>
+
+</html>
