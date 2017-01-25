@@ -31,7 +31,9 @@ function move(){
 		
 }
 function down(){
-	btn.removeEventListener("mouseover", move);
+	if(event.shiftKey){
+		btn.removeEventListener("mouseover", move);
+	}
 }
 function up(){
 	if(btn.value == "Click me!"){
