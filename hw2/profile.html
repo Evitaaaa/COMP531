@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+		<title> Sign Up Page </title>
+		<meta charset="utf - 8">
+		<meta name="author" content="Evita">
+		<meta name="keywords" content="HTML, JAVASCRIPT">
+		<meta name="description" content="Sign Up Page">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+
+	<body>
+		<h1> Profile </h1>
+
+		<table >
+			
+			<tr>
+			<td> Display Name: </td>
+			<td><input type="text"  placeholder="Display Name" id="dname" ></td>
+			<td><info id="name_info"> evita </info></td>
+			<td><span id="name_upt" ></span></td>
+			</tr>
+			
+			<tr>
+			<td> Email Address: </td>
+			<td><input type="text" placeholder="e.g. ab12@rice.edu" id="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.]+\.[A-Za-z]{2,3}$" required></td>
+			<td><info id="email_info"> evita@rice.edu</info></td>
+			<td><span id="email_upt"></span> </td>
+			</tr>
+
+			<tr>
+			<td> Phone Number: </td>
+			<td><input type="tel" placeholder="123-123-1234" id="phone" pattern="\d\d\d-\d\d\d-\d\d\d\d" required></td>
+			<td><info id="phone_info"> 123-123-1234 </info></td>
+			<td><span id="phone_upt" ></span> </td>
+			</tr>
+
+			<tr>
+			<td> Zipcode: </td>
+			<td><input type="text" placeholder="12345" id="zipcode" pattern="[0-9]{5}" required></td>
+			<td><info id="zcode_info"> 12345 </info></td>
+			<td><span id="zcode_upt"  ></span> </td>
+			</tr>
+
+			<tr>
+			<td> Password: </td>
+			<td><input type="password"  placeholder="Password" name="password" id="passwordId" required></td>
+			<td><info id="pwd1_info"> 123abc </info></td>
+			<td><span id="pwd1_upt"></span> </td>
+			</tr>
+
+			<tr>
+			<td> Password Confirmation </td>
+			<td><input type="password"  placeholder="Repeat your password" name="cpassword" id="cpasswordId"
+			 required></td>
+			 <td><info id="pwd2_info"> 123abc </info></td>
+			<td><span id="pwd2_upt"></span> </td>
+			</tr>
+
+			<tr>
+			<td> <input type="button" value="Update" onclick="return validate()" class="btn"> </td>
+			<td> <input type="submit" value="Return" onclick="return back()" class="btn"> </td>
+			</tr>
+
+
+		</table>
+
+	</body>
+	<script src="profile.js"></script>
+</html>
