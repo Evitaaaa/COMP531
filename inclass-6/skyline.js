@@ -2,7 +2,7 @@
 
 var createApp = function(canvas) { 
 	var c = canvas.getContext("2d");
-
+	
 	// Create the ground
 	var floor = canvas.height/2
 	var grad = c.createLinearGradient(0,floor,0,canvas.height)
@@ -58,8 +58,6 @@ var createApp = function(canvas) {
 		//draw window
 		drawWin(i);
 		heightArr[i] = heightArr[i] + 30;
-
-
 	}
 	var grow = function(event){
 		var x = event.x;
@@ -74,7 +72,6 @@ var createApp = function(canvas) {
 	};
 	canvas.addEventListener("mousedown", grow);
 
-	
 	var drawBld = function(i){
 
 		var xStart = startXArr[i];
@@ -96,8 +93,6 @@ var createApp = function(canvas) {
 		var xStart = startXArr[i];
 		var h = heightArr[i];
 		var w = widthArr[i];
-
-		
 		for (var y = floor - floorSpacing; y > floor - h + (floorSpacing + windowHeight); y -= floorSpacing + windowHeight) {
 			for (var x = windowSpacing; x < w - windowWidth; x += windowSpacing + windowWidth) {
 				if(Math.random() < 0.5){
@@ -116,9 +111,6 @@ var createApp = function(canvas) {
 			drawWin(i);
 		}
 	}
-
-	//var inter1 = setInterval(drawAllBld, 100);
-
 	// draw car
 	var carMove = 0;
 	var car = document.getElementById("car");
@@ -154,8 +146,6 @@ var createApp = function(canvas) {
 		}
 	}
 
-
-
 	var drawAll = function(){
 		c.fillStyle = "white";
 	    c.fillRect(0, 0, 800, 400);
@@ -164,9 +154,7 @@ var createApp = function(canvas) {
 		drawSun();
 	}
 	var inter = setInterval(drawAll, 100);
-
-
-
+	
 	return {
 		build: build
 	}
