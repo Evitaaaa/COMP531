@@ -73,7 +73,7 @@
     }
 
     exports.inclass = {
-        author: 'undefined',
+        author: 'Evita',
         countWords, countWordsSafe, getLargest
     }
 
