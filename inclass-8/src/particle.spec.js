@@ -23,8 +23,8 @@ describe('Particle Functionality', () => {
     it('should update the position by the velocity', () => {
         const p = particle({ position: [1, 1], velocity: [0.5, -0.5] })
         const { position } = update(p, 1.0, canvas)
-        expect(position[0]).to.be.closeTo(1.5, 0.1)
-        expect(position[1]).to.be.closeTo(0.5, 0.1)
+        expect(position[0]).to.be.closeTo(1.5, 0.0001)
+        expect(position[1]).to.be.closeTo(0.5, 0.0001)
         //expect(position[0]).to.eql([1.5, 0.5])
     })
 
