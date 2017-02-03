@@ -14,10 +14,10 @@ describe('Particle Functionality', () => {
         // IMPLEMENT ME:
         //   check position, velocity, acceleration, mass
         //   these should all be numbers or arrays of numbers
-        expect(p.position).to.be.ok
-        expect(p.velocity).to.be.ok
-        expect(p.acceleration).to.be.ok
-        expect(p.mass).to.be.ok
+        expect(p.position).to.be.a('number')
+        expect(p.velocity).to.be.a('number')
+        expect(p.acceleration).to.be.a('number')
+        expect(p.mass).to.be.a('number')
     })
 
     it('should update the position by the velocity', () => {
