@@ -1,0 +1,267 @@
+<html>
+<head>
+<title> Tetris </title>
+	<meta charset="utf - 8">
+	<meta name="author" content="Evita">
+	<meta name="keywords" content="HTML, JAVASCRIPT">
+	<meta name="description" content="Tetris game">
+
+<style>
+	#playBoard tr td{ 			
+		width: 20px; 
+		height: 20px; 
+	}
+</style>
+</head>
+
+<body>
+	<input type="button" value="Start Game!" id="startBtn" onclick=" return start(this)"> 
+	Score: <span id="score"> 0 </span>
+	<span id="alert" style= "visibility:hidden">SPEED UP!</span>
+	<table id="playBoard" border=1 style="border-collapse:collapse">
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr>  
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr>
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr>  
+</table> 
+
+</body>
+<script src="Tetris_evita.js"></script>
+
+</html>
