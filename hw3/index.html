@@ -1,19 +1,33 @@
-<html> 
-<head> 
-<title>R</title> 
-<style> 
-#board tr td{ 
-width: 20px; 
-height: 20px; 
-} 
-</style> 
-</head> 
+<html>
+<head>
+<title> Tetris </title>
+	<meta charset="utf - 8">
+	<meta name="author" content="Evita">
+	<meta name="keywords" content="HTML, JAVASCRIPT">
+	<meta name="description" content="Tetris game">
 
-<script src="Tetris_yy55.js"> </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-<body> 
-	<input type="button" value="begin" onclick="begin(this);"/> Score: <span id="score"> 0</span>
-	<table id="board" cellspacing=0 cellpadding=0 border=1 style="border-collapse:collapse;"> 
+</head>
+
+<body>
+	<input type="button" class="ctrl" value="Start Game!" id="startBtn" onclick=" return start(this)"> 
+	<input type="text" placeholder="Enter your name" id="name">
+	<span id="alert" style= "visibility:hidden">SPEED UP!</span>
+	<br>
+	<input type="button" class="ctrl" value="Left" id="leftBtn" onclick=" return goLeft()">
+	<input type="button" class="ctrl" value="Right" id="rightBtn" onclick=" return goRight()">
+	<input type="button" class="ctrl" value="Rotate" id="rotateBtn" onclick=" return rotate()">
+	<input type="button" class="ctrl" value="Drop" id="dropBtn" onclick=" return goDown()">
+	<br>
+	<div>
+	Score: <span id="score"> 0 </span>
+	<br>
+	Time Cost:<span id="timeCost"> 0 </span>s
+	<br>
+	Best Score:<span id="bestScore"></span>
+	</div>  
+	<table id="playBoard" border=1 style="border-collapse:collapse">
 	<tr> 
 		<td></td> 
 		<td></td> 
@@ -229,8 +243,34 @@ height: 20px;
 		<td></td> 
 		<td></td> 
 		<td></td> 
+	</tr>
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
 	</tr> 
+	<tr> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+		<td></td> 
+	</tr>  
 </table> 
 
-</body> 
-</html> 
+</body>
+<script src="Tetris_evita.js"></script>
+
+</html>
