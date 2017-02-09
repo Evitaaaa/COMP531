@@ -1,0 +1,18 @@
+#playBoard tr td{ 			
+		width: 20px; 
+		height: 20px; 
+}
+.ctrl{
+	cursor: pointer;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-color: rgba(255,0,0,0.3);
+	border-radius: 10px;
+}
+span{
+	text-align: left;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color:rgba(255,0,0,0.3);
+}
+div{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}

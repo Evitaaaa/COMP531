@@ -5,6 +5,8 @@ var boardRcd = new Array(20);
 //the score
 var score = 0;
 var scoreGui = document.getElementById("score"); 
+var bestScoreGui = document.getElementById("bestScore"); 
+var timeCostGui = document.getElementById("timeCost"); 
 
 //btn
 var startBtn = document.getElementById("startBtn"); 
@@ -18,6 +20,63 @@ var status = 0;
 // currentBlock
 var currentBlock = null;
 var tmpBlock = new Array(4);
+
+//username
+var username = null;
+var nameGui = document.getElementById("name"); 
+
+//time
+var startTime = 0;
+var endTime = 0;
+var hiScore = 0;
+
+if( getCookie("hiScore") != ""){
+	hiScore = getCookie("hiScore");
+}
+setCookie("hiScore", String(hiScore), 30);
+
+bestScoreGui.innerHTML = getCookie("hiScore");
+
+//settor for cookie
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+//gettor for cookie
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function updateHighestScore(){
+	hiScore = parseInt(getCookie("hiScore"));
+	if(score > hiScore){
+		hiScore = score;
+		setCookie("hiScore", String(hiScore), 30);
+	}
+	var dur = (endTime - startTime)/1000;
+	var name = username + "time cost: ";
+	setCookie(name, String(dur), 30);
+	bestScoreGui.innerHTML = hiScore;
+	timeCostGui.innerHTML = dur;
+
+
+}
+
 
 
 //initialization
@@ -94,11 +153,14 @@ function goDown(){
 			paintBoard();
 		}
 		if(hitUpper()){
-			
-			alert("Game over!"); 
+			alert("GAME OVER!");
+			status = 2;
 			startBtn.value = "New Round";
-			status = 2; 
-			return;
+			setCookie(username + "Score", String(score), 30);
+			clearInterval(interval);
+			endTime = new Date().getTime();
+			updateHighestScore();
+			return ;
 		}
 		else{
 			makeBlock();
@@ -272,7 +334,11 @@ function clearLine(){
 	score = score + 10 * lines;
 	scoreGui.innerHTML = score;
 	if(lines > 0 && score > 0 && score % 20 == 0){
-		time = time - 100;
+		clearInterval(interval);
+		if(time > 300){
+			time = time - 100;
+		}
+		interval = setInterval(goDown, time); 
 		alertGui.style.visibility = "visible";
 		setTimeout(function(){ alertGui.style.visibility = "hidden"; }, 3000);
 	}
@@ -330,19 +396,31 @@ function newRound(){
 	}
 	clearBoard();
 	clearInterval(interval);
+	nameGui.style.visibility = "visible";
+	nameGui.placeholder="Enter your name";
 	score = 0;
 	status = 0;
 	time = 1000;
 	scoreGui.innerHTML = score;
+	timeCostGui.innerHTML = 0;
 }
 
 function start(e){
+
+	username = nameGui.value;
+	//alert(document.cookie);
+    nameGui.style.visibility = "hidden";
+    startTime = new Date().getTime();
 	if(status == 0){
 		status = 1; 
 		if(!makeBlock()){
 			alert("GAME OVER!");
 			status = 2;
 			startBtn.value = "New Round";
+			setCookie(username + "Score", String(score), 30);
+			clearInterval(interval);
+			endTime = new Date().getTime();
+			updateHighestScore();
 			return ;
 		}
 		paintBlock(); 
