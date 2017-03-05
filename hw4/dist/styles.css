@@ -1,0 +1,68 @@
+#app {
+    text-align: center;
+}
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+}
+#Bday{
+    width:152px;
+}
+
+.profileImage {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-color:rgba(0,0,0,0.3);
+	border-radius: 10px;
+    height: 128px;
+    width: 128px;
+}
+
+.card-artilce {
+    width: 673px;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-color:rgba(0,0,0,0.3);
+	border-radius: 10px;
+}
+.signature{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.card3{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-color:rgba(0,0,0,0.3);
+	border-radius: 10px;
+    height: 150px;
+    width: 150px;
+
+}
+.article-image{
+    height: 128px;
+    width: 128px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.input-info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    border-radius: 10px;    
+}
+.show-info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.newMember{
+     width: 150px;
+     float: center;
+}
+.status{
+    font-family: "Chalkboard";
+}

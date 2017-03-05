@@ -1,0 +1,14 @@
+{
+    "location": "landingPage",
+    "regErrMsg": "",
+    "logErrMsg": "",
+    "updateMsg": "",
+    "user": {
+        "name": "Evita",
+        "email": "ab@ba.com",
+        "phoneNum": "1234567890",
+        "Bday": "1990-01-01",
+        "zipCode": "12345",
+        "password": "abc123"
+    }
+}

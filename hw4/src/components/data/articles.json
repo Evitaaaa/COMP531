@@ -1,0 +1,51 @@
+{
+    "articles": [
+        {
+            "author": "Mush",
+            "text": "Vestibulum sed laoreet nulla, et tristique erat. Aliquam tempor, felis maximus rhoncus consequat, sem lorem elementum est, id ornare sem nisl eu augue. Sed efficitur mauris non efficitur tincidunt. Vestibulum finibus libero et ligula scelerisque, molestie aliquam nunc finibus. Nullam vitae consectetur quam. Pellentesque sit amet dui ante. Mauris ac rhoncus eros, ut dignissim enim. Aliquam ut placerat magna, mollis auctor enim.",
+            "timestamp": "",
+            "picture": "images/mush.jpg"
+        },
+        
+        {
+            "author": "Brenda" ,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis vehicula diam, quis condimentum ligula volutpat nec. Duis et volutpat lacus. Proin consequat lectus erat, at molestie nisi vulputate ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrice        posuere cubilia Curae Donec tempor elit eros, eu ornare nisl facilisis eu. Suspendisse sit amet mattis dui. In lacinia massa et enim aliquet condimentum.",
+            "timestamp": "",
+            "picture" : "images/bag.jpg"
+        },
+
+        {   
+            "author": "Justin",
+            "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc justo leo, laoreet et tempus sit amet, efficitur sit amet dolor. Nunc ornare ex magna, et rhoncus ex fermentum sed. Aenean facilisis nibh cursus dui euismod, quis volutpat enim tempor. Vivamus at mauris mattis libero cursus accumsan. Phasellus interdum porttitor eros, non tincidunt purus maximus sed. Donec at gravida sapien, non ultrices dolor.",
+            "timestamp": "",
+            "picture": ""
+        },
+
+        {
+            "author": "Tony",
+            "text": "Donec ut quam hendrerit, rhoncus mauris eget, bibendum purus. Proin mattis, urna vitae aliquam pellentesque, magna nisi cursus ipsum, in gravida dolor lectus a sapien. Curabitur sagittis ante in metus dapibus lacinia. In eu ornare metus. Nam quis ullamcorper tortor, in condimentum lectus. Nam tincidunt laoreet erat at malesuada. Aliquam justo nisl, tincidunt quis mi vel, tincidunt dictum sem.",
+            "timestamp": "",
+            "picture": "images/paper.jpg"
+        },
+
+        
+
+        {
+            "author": "Owl",
+            "text":"Aliquam ultrices sit amet mi vel posuere. Vestibulum odio tortor, sodales ac rhoncus vel, iaculis et libero. Donec ultricies pellentesque vehicula. Nam hendrerit, lectus vitae pellentesque pulvinar, est justo mattis sapien, quis egestas leo purus et diam. Aliquam erat volutpat. Etiam malesuada purus in nisi semper, vel porta eros facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisl mi, sollicitudin in lectus ac, imperdiet pretium leo. In pretium eros non velit congue scelerisque.",
+            "timestamp": "",
+            "picture": ""
+        },
+
+        {
+            "author": "Chris",
+            "text": "Cras ullamcorper porta enim, ut pulvinar risus elementum sit amet. Ut sodales lorem eu mauris scelerisque interdum. Fusce ac elit sit amet eros luctus lacinia. Praesent fringilla auctor neque in dapibus. Suspendisse quam leo, bibendum a magna sit amet, mollis semper orci. Cras non enim vel elit rutrum elementum at nec eros.",
+            "timestamp": "",
+            "picture": "images/lines.jpg"
+        }
+    ],
+
+    "images": [
+
+    ]
+}
