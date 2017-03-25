@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.78% </span>
+        <span class="strong">62.22% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>17/45</span>
+        <span class='fraction'>28/45</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">5% </span>
+        <span class="strong">45% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/20</span>
+        <span class='fraction'>9/20</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">27.03% </span>
+        <span class="strong">54.05% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/37</span>
+        <span class='fraction'>20/37</span>
       </div>
       <div class='fl pad1y'>
         <span class="strong">1 branch</span>
@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -136,7 +136,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,27 +171,27 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -216,8 +216,8 @@ import {initArticles} from '../article/articleActions'
 import {initFollowing} from '../main/followingActions'
 &nbsp;
 &nbsp;
-export <span class="fstat-no" title="function not covered" >function init(name){</span>
-    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+export function init(name){
+    return <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
 &nbsp;
         const <span class="cstat-no" title="statement not covered" >user = {</span>
             name: name,
@@ -255,24 +255,24 @@ export <span class="fstat-no" title="function not covered" >function init(name){
     }
 }
 &nbsp;
-export <span class="fstat-no" title="function not covered" >function loginAction({<span class="cstat-no" title="statement not covered" >username, password}){</span></span>
-    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt;{</span></span>
-        resource(<span class="cstat-no" title="statement not covered" >'POST', 'login', {username, password})</span>
-        .then(<span class="fstat-no" title="function not covered" >(response)=&gt;{</span>
-            dispatch(<span class="cstat-no" title="statement not covered" >{type: 'LOG_IN', username: response.username})</span>
-            dispatch(<span class="cstat-no" title="statement not covered" >init(username))</span>
+export function loginAction({username, password}){
+    return (dispatch) =&gt;{
+        resource('POST', 'login', {username, password})
+        .then((response)=&gt;{
+            dispatch({type: 'LOG_IN', username: response.username})
+            dispatch(init(username))
         })
-        .catch(<span class="fstat-no" title="function not covered" >(err) =&gt; {</span>
-            console.<span class="cstat-no" title="statement not covered" >log(err)</span>
-            dispatch(<span class="cstat-no" title="statement not covered" >{type: 'LOG_IN_MSG', logErrMsg: "Fail to log in as " + username})</span>
+        .catch((err) =&gt; {
+            console.log(err)
+            dispatch({type: 'LOG_IN_MSG', logErrMsg: "Fail to log in as " + username})
         })
     }
 }
-export <span class="fstat-no" title="function not covered" >function logoutAction(){</span>
-    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt;{</span></span>
-        resource(<span class="cstat-no" title="statement not covered" >'PUT', 'logout')</span>
-        .then(<span class="fstat-no" title="function not covered" >()=&gt;{</span>
-            dispatch(<span class="cstat-no" title="statement not covered" >{type:'LOG_OUT'})</span>
+export function logoutAction(){
+    return (dispatch) =&gt;{
+        resource('PUT', 'logout')
+        .then(()=&gt;{
+            dispatch({type:'LOG_OUT'})
         })
         .catch(<span class="fstat-no" title="function not covered" >(err) =&gt;{</span>
             console.<span class="cstat-no" title="statement not covered" >log(err)</span>
@@ -296,7 +296,7 @@ export <span class="fstat-no" title="function not covered" >function registerAct
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 21:01:03 GMT-0500 (CDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 22:43:25 GMT-0500 (CDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

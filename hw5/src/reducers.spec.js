@@ -10,10 +10,11 @@ describe('Validate reducer (no fetch requests here)', ()=>{
                 mockery.enable({warnOnUnregistered: false, useCleanCache:true})
                 mockery.registerMock('node-fetch', fetch)
                 require('node-fetch')
-                url = require('./actions').url
-                resource = require('./actions').default
-                Reducer = require('./reducers').default
+                
             }
+            url = require('./actions').url
+            resource = require('./actions').default
+            Reducer = require('./reducers').default
     })
 
     afterEach(() => {

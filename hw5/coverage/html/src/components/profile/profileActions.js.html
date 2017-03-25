@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">29.63% </span>
+        <span class="strong">74.07% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/27</span>
+        <span class='fraction'>20/27</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">9.09% </span>
+        <span class="strong">72.73% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/11</span>
+        <span class='fraction'>8/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">17.39% </span>
+        <span class="strong">69.57% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/23</span>
+        <span class='fraction'>16/23</span>
       </div>
       <div class='fl pad1y'>
         <span class="strong">1 branch</span>
@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -117,29 +117,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -170,30 +170,30 @@
         "password": "abc123"
         */
 &nbsp;
-export const initProfile = <span class="fstat-no" title="function not covered" >(name) =&gt;{</span>
-    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt;{</span></span>
-        const <span class="cstat-no" title="statement not covered" >user = {</span>
+export const initProfile = (name) =&gt;{
+    return (dispatch) =&gt;{
+        const user = {
             name: name
         }
-        const  <span class="cstat-no" title="statement not covered" >email = resource('GET', 'email/')</span>
-        .then(<span class="fstat-no" title="function not covered" >(response) =&gt;{</span>
-            user.<span class="cstat-no" title="statement not covered" >email = response.email</span>
+        const  email = resource('GET', 'email/')
+        .then((response) =&gt;{
+            user.email = response.email
         })
-        const <span class="cstat-no" title="statement not covered" >zipCode = resource('GET', 'zipcode')</span>
-        .then(<span class="fstat-no" title="function not covered" >(response) =&gt;{</span>
-            user.<span class="cstat-no" title="statement not covered" >zipCode = response.zipcode</span>
+        const zipCode = resource('GET', 'zipcode')
+        .then((response) =&gt;{
+            user.zipCode = response.zipcode
         })
-        const <span class="cstat-no" title="statement not covered" >Bday = resource('GET', 'dob')</span>
-        .then(<span class="fstat-no" title="function not covered" >(response) =&gt;{</span>
-            user.<span class="cstat-no" title="statement not covered" >Bday = new Date(response.dob).toLocaleDateString()</span>
+        const Bday = resource('GET', 'dob')
+        .then((response) =&gt;{
+            user.Bday = new Date(response.dob).toLocaleDateString()
         })
-        const <span class="cstat-no" title="statement not covered" >avatar = resource('GET', 'avatars')</span>
-        .then(<span class="fstat-no" title="function not covered" >(response) =&gt;{</span>
-            user.<span class="cstat-no" title="statement not covered" >picture = response.avatars[0].avatar</span>
+        const avatar = resource('GET', 'avatars')
+        .then((response) =&gt;{
+            user.picture = response.avatars[0].avatar
         })
 &nbsp;
-        Promise.<span class="cstat-no" title="statement not covered" >all([email, zipCode, Bday, avatar]).then(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
-            dispatch(<span class="cstat-no" title="statement not covered" >{type: 'INIT_PROFILE', user: user})</span>
+        Promise.all([email, zipCode, Bday, avatar]).then(() =&gt; {
+            dispatch({type: 'INIT_PROFILE', user: user})
         })
     }
 }
@@ -215,7 +215,7 @@ export const updateProfile = <span class="fstat-no" title="function not covered"
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 21:01:03 GMT-0500 (CDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 22:43:25 GMT-0500 (CDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

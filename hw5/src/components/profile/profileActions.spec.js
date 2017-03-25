@@ -11,11 +11,12 @@ describe('Validate Profile actions (mocked requests)', () => {
                 mockery.enable({warnOnUnregistered: false, useCleanCache:true})
                 mockery.registerMock('node-fetch', fetch)
                 require('node-fetch')
-                url = require('../../actions').url
-                resource = require('../../actions').default
-                initProfile = require('./profileActions').initProfile
-                Reducer = require('../../reducers').default
+                
             }
+            url = require('../../actions').url
+            resource = require('../../actions').default
+            initProfile = require('./profileActions').initProfile
+            Reducer = require('../../reducers').default
     })
 
     afterEach(() => {

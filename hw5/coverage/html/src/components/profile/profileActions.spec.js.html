@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.05% </span>
+        <span class="strong">86.84% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>27/38</span>
+        <span class='fraction'>33/38</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">75% </span>
@@ -30,22 +30,22 @@
         <span class='fraction'>6/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>7/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">84.85% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>22/33</span>
+        <span class='fraction'>28/33</span>
       </div>
       <div class='fl pad1y'>
-        <span class="strong">2 statements, 1 branch</span>
+        <span class="strong">1 branch</span>
         <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -129,7 +129,8 @@
 80
 81
 82
-83</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,11 +143,12 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -184,7 +186,7 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -206,7 +208,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -224,11 +226,12 @@ describe('Validate Profile actions (mocked requests)', () =&gt; {
                 mockery.<span class="cstat-no" title="statement not covered" >enable({warnOnUnregistered: false, useCleanCache:true})</span>
                 mockery.<span class="cstat-no" title="statement not covered" >registerMock('node-fetch', fetch)</span>
                 require(<span class="cstat-no" title="statement not covered" >'node-fetch')</span>
-                url = <span class="cstat-no" title="statement not covered" >require('../../actions').url</span>
-                resource = <span class="cstat-no" title="statement not covered" >require('../../actions').default</span>
-                initProfile = <span class="cstat-no" title="statement not covered" >require('./profileActions').initProfile</span>
-                Reducer = <span class="cstat-no" title="statement not covered" >require('../../reducers').default</span>
+                
             }
+            url = require('../../actions').url
+            resource = require('../../actions').default
+            initProfile = require('./profileActions').initProfile
+            Reducer = require('../../reducers').default
     })
 &nbsp;
     afterEach(() =&gt; {
@@ -265,8 +268,8 @@ describe('Validate Profile actions (mocked requests)', () =&gt; {
 &nbsp;
         console.log('[53]')
         initProfile(name)(
-<span class="fstat-no" title="function not covered" >            (response) =&gt;{</span>
-                expect(<span class="cstat-no" title="statement not covered" >response.user).to.eql({</span>
+            (response) =&gt;{
+                expect(response.user).to.eql({
                     name:'yy55',
                     email:'ab12@rice.com',
                     picture: 'pictureURL',
@@ -288,7 +291,7 @@ describe('Validate Profile actions (mocked requests)', () =&gt; {
 &nbsp;
         let state ={user:{name:'', status:''}}
         state = Reducer(state, action)
-        expect(<span class="cstat-no" title="statement not covered" >state.user.status).to.eql('new status')</span>
+        expect(state.user.status).to.eql('new status')
         done()
     })
 &nbsp;
@@ -299,7 +302,7 @@ describe('Validate Profile actions (mocked requests)', () =&gt; {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 21:01:03 GMT-0500 (CDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 22:43:25 GMT-0500 (CDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

@@ -9,11 +9,12 @@ describe('Validate Article actions', ()=>{
                 mockery.enable({warnOnUnregistered: false, useCleanCache:true})
                 mockery.registerMock('node-fetch', fetch)
                 require('node-fetch')
-                url = require('../../actions').url
-                resource = require('../../actions').resource
-                Reducer = require('../../reducers').default
-                initArticles = require('./articleActions').initArticles
+                
             }
+            url = require('../../actions').url
+            resource = require('../../actions').resource
+            Reducer = require('../../reducers').default
+            initArticles = require('./articleActions').initArticles
     })
 
     afterEach(() => {

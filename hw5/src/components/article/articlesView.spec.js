@@ -13,11 +13,12 @@ describe('ArticlesView (component tests)', ()=>{
                 mockery.enable({warnOnUnregistered: false, useCleanCache:true})
                 mockery.registerMock('node-fetch', fetch)
                 require('node-fetch')
-                url = require('../../actions').url
-                resource = require('../../actions').default
-                Reducer = require('../../reducers').default
-                addArticle = require('./articleActions').addArticle
+                
             }
+            url = require('../../actions').url
+            resource = require('../../actions').default
+            Reducer = require('../../reducers').default
+            addArticle = require('./articleActions').addArticle
     })
 
     afterEach(() => {

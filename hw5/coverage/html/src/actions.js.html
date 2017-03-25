@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">55% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/20</span>
+        <span class='fraction'>20/20</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/10</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/3</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">42.86% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/14</span>
+        <span class='fraction'>14/14</span>
       </div>
       <div class='fl pad1y'>
         <span class="strong">1 branch</span>
@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -85,28 +85,28 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -116,29 +116,29 @@ import fetch from 'isomorphic-fetch'
 &nbsp;
 export const url = 'https://webdev-dummy.herokuapp.com'
 &nbsp;
-export const resource = <span class="fstat-no" title="function not covered" >(method, endpoint, payload) =&gt; {</span>
-    const <span class="cstat-no" title="statement not covered" >options = {</span>
+export const resource = (method, endpoint, payload) =&gt; {
+    const options = {
         method,
         credentials: 'include',
         headers: {
             'Content-Type': 'application/json'
         }
     }
-    if (<span class="cstat-no" title="statement not covered" >payload) <span class="cstat-no" title="statement not covered" >options.body = JSON.stringify(payload)</span></span>
+    if (payload) options.body = JSON.stringify(payload)
 &nbsp;
     
-    return <span class="cstat-no" title="statement not covered" >fetch(`${url}/${endpoint}`, options)</span>
-        .then(<span class="fstat-no" title="function not covered" >r =&gt; {</span>
-            if (<span class="cstat-no" title="statement not covered" >r.status === 200) {</span>
-                if (<span class="cstat-no" title="statement not covered" >r.headers.get('Content-Type').indexOf('json') &gt; 0) {</span>
-                    return <span class="cstat-no" title="statement not covered" >r.json()</span>
+    return fetch(`${url}/${endpoint}`, options)
+        .then(r =&gt; {
+            if (r.status === 200) {
+                if (r.headers.get('Content-Type').indexOf('json') &gt; 0) {
+                    return r.json()
                 } else {
-                    return <span class="cstat-no" title="statement not covered" >r.text()</span>
+                    return r.text()
                 }
             } else {
                 // useful for debugging, but remove in production
                 //console.error(`${method} ${endpoint} ${r.statusText}`)
-                throw <span class="cstat-no" title="statement not covered" >new Error(r.statusText)</span>
+                throw new Error(r.statusText)
             }
         })
 }
@@ -149,7 +149,7 @@ export default resource
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 21:01:03 GMT-0500 (CDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 22:43:25 GMT-0500 (CDT)
 </div>
 </div>
 <script src="../prettify.js"></script>

@@ -15,6 +15,11 @@ describe('Validate Authentication (involves mocked requests)', () =>{
                 logoutAction = require('./authActions').logoutAction
                 Reducer = require('../../reducers').default
             }
+            url = require('../../actions').url
+            resource = require('../../actions').resource
+            loginAction = require('./authActions').loginAction
+            logoutAction = require('./authActions').logoutAction
+            Reducer = require('../../reducers').default
 
     })
 

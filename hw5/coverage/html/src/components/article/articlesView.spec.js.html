@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">65% </span>
+        <span class="strong">82.5% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>26/40</span>
+        <span class='fraction'>33/40</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">75% </span>
@@ -35,17 +35,17 @@
         <span class='fraction'>6/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60% </span>
+        <span class="strong">80% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>21/35</span>
+        <span class='fraction'>28/35</span>
       </div>
       <div class='fl pad1y'>
-        <span class="strong">1 statement, 1 branch</span>
+        <span class="strong">1 branch</span>
         <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -101,7 +101,8 @@
 52
 53
 54
-55</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+55
+56</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -116,11 +117,12 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -144,12 +146,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -170,11 +172,12 @@ describe('ArticlesView (component tests)', ()=&gt;{
                 mockery.<span class="cstat-no" title="statement not covered" >enable({warnOnUnregistered: false, useCleanCache:true})</span>
                 mockery.<span class="cstat-no" title="statement not covered" >registerMock('node-fetch', fetch)</span>
                 require(<span class="cstat-no" title="statement not covered" >'node-fetch')</span>
-                url = <span class="cstat-no" title="statement not covered" >require('../../actions').url</span>
-                resource = <span class="cstat-no" title="statement not covered" >require('../../actions').default</span>
-                Reducer = <span class="cstat-no" title="statement not covered" >require('../../reducers').default</span>
-                addArticle = <span class="cstat-no" title="statement not covered" >require('./articleActions').addArticle</span>
+                
             }
+            url = require('../../actions').url
+            resource = require('../../actions').default
+            Reducer = require('../../reducers').default
+            addArticle = require('./articleActions').addArticle
     })
 &nbsp;
     afterEach(() =&gt; {
@@ -198,12 +201,12 @@ describe('ArticlesView (component tests)', ()=&gt;{
 &nbsp;
     it('should dispatch actions to create a new article', (done)=&gt;{
         const state = Reducer({articles:[]}, {type: 'ADD_ARTICLE', text: 'article2'})
-        const <span class="cstat-no" title="statement not covered" >node = shallow(</span>
+        const node = shallow(
                 &lt;ArticlesView articles={state.articles} search={<span class="fstat-no" title="function not covered" >_=&gt;<span class="cstat-no" title="statement not covered" >_} /&gt;</span></span>
         )
 &nbsp;
-        expect(<span class="cstat-no" title="statement not covered" >node.children().length).to.eql(2)</span>
-        expect(<span class="cstat-no" title="statement not covered" >node.find('table').children().length).to.eql(1)</span>
+        expect(node.children().length).to.eql(2)
+        expect(node.find('table').children().length).to.eql(1)
         done()
     })
 &nbsp;
@@ -215,7 +218,7 @@ describe('ArticlesView (component tests)', ()=&gt;{
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 21:01:03 GMT-0500 (CDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 22:43:25 GMT-0500 (CDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

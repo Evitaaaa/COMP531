@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">62.5% </span>
+        <span class="strong">81.13% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>30/48</span>
+        <span class='fraction'>43/53</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">75% </span>
@@ -30,22 +30,22 @@
         <span class='fraction'>6/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">70% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>7/10</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">57.14% </span>
+        <span class="strong">78.72% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>24/42</span>
+        <span class='fraction'>37/47</span>
       </div>
       <div class='fl pad1y'>
-        <span class="strong">3 statements, 1 branch</span>
+        <span class="strong">1 branch</span>
         <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -131,7 +131,12 @@
 82
 83
 84
-85</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+85
+86
+87
+88
+89
+90</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,6 +153,11 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,10 +181,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,7 +202,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,9 +217,9 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -232,6 +242,11 @@ describe('Validate Authentication (involves mocked requests)', () =&gt;{
                 logoutAction = <span class="cstat-no" title="statement not covered" >require('./authActions').logoutAction</span>
                 Reducer = <span class="cstat-no" title="statement not covered" >require('../../reducers').default</span>
             }
+            url = require('../../actions').url
+            resource = require('../../actions').resource
+            loginAction = require('./authActions').loginAction
+            logoutAction = require('./authActions').logoutAction
+            Reducer = require('../../reducers').default
 &nbsp;
     })
 &nbsp;
@@ -254,11 +269,11 @@ describe('Validate Authentication (involves mocked requests)', () =&gt;{
         
 &nbsp;
         loginAction({username, password})(
-<span class="fstat-no" title="function not covered" >            (action) =&gt;{</span>
-                expect(<span class="cstat-no" title="statement not covered" >action).to.eql({type:'LOG_IN',username:'yy55'})</span>
-                let <span class="cstat-no" title="statement not covered" >state = Reducer({user: "", location: ""}, action)</span>
-                expect(<span class="cstat-no" title="statement not covered" >state.user.name).to.eql('yy55')</span>
-                expect(<span class="cstat-no" title="statement not covered" >state.location).to.eql('mainPage')</span>
+            (action) =&gt;{
+                expect(action).to.eql({type:'LOG_IN',username:'yy55'})
+                let state = Reducer({user: "", location: ""}, action)
+                expect(state.user.name).to.eql('yy55')
+                expect(state.location).to.eql('mainPage')
                 done()
             })
     })
@@ -275,8 +290,8 @@ describe('Validate Authentication (involves mocked requests)', () =&gt;{
         })
 &nbsp;
         loginAction({username, password})(
-<span class="fstat-no" title="function not covered" >            (action) =&gt;{</span>
-                expect(<span class="cstat-no" title="statement not covered" >action).to.eql({type:'LOG_IN_MSG', logErrMsg:"Fail to log in as aa"})</span>
+            (action) =&gt;{
+                expect(action).to.eql({type:'LOG_IN_MSG', logErrMsg:"Fail to log in as aa"})
                 done()
             }
         )
@@ -290,10 +305,10 @@ describe('Validate Authentication (involves mocked requests)', () =&gt;{
 &nbsp;
         let state
         logoutAction()(
-<span class="fstat-no" title="function not covered" >            (action) =&gt;{</span>
-                expect(<span class="cstat-no" title="statement not covered" >action.type).to.eql('LOG_OUT')</span>
-                state = <span class="cstat-no" title="statement not covered" >Reducer(state, action)</span>
-                expect(<span class="cstat-no" title="statement not covered" >state.user).to.eql([])</span>
+            (action) =&gt;{
+                expect(action.type).to.eql('LOG_OUT')
+                state = Reducer(state, action)
+                expect(state.user).to.eql([])
                 done()
             }
         )
@@ -305,7 +320,7 @@ describe('Validate Authentication (involves mocked requests)', () =&gt;{
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 21:01:03 GMT-0500 (CDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 22:43:25 GMT-0500 (CDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
