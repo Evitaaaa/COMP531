@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 56.0.2924 (Mac OS X 10.11.6)" package="" timestamp="2017-03-25T02:01:02" id="0" hostname="yans-MacBook-Pro.local" tests="19" errors="0" failures="18" time="0.043">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"/>
+  </properties>
+  <testcase name="Validate actions (these are functions that dispatch actions) resource should be a resource (i.e., mock a request)" time="0.002" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate actions (these are functions that dispatch actions)">
+    <failure type="">TypeError: resource is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:6389:258 &lt;- webpack:///src/actions.spec.js:9:2469)
+</failure>
+  </testcase>
+  <testcase name="Validate actions (these are functions that dispatch actions) Resource should give me the http error" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate actions (these are functions that dispatch actions)">
+    <failure type="">TypeError: resource is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:6393:85 &lt;- webpack:///src/actions.spec.js:9:2823)
+</failure>
+  </testcase>
+  <testcase name="Validate actions (these are functions that dispatch actions) resource should be POSTable" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate actions (these are functions that dispatch actions)">
+    <failure type="">TypeError: resource is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:6397:416 &lt;- webpack:///src/actions.spec.js:9:3465)
+</failure>
+  </testcase>
+  <testcase name="Validate actions (these are functions that dispatch actions) should update error message (for displaying error mesage to user)" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate actions (these are functions that dispatch actions)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:6401:198 &lt;- webpack:///src/actions.spec.js:9:4036)
+</failure>
+  </testcase>
+  <testcase name="Validate actions (these are functions that dispatch actions) should update success message (for displaying success message to user)" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate actions (these are functions that dispatch actions)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:6403:200 &lt;- webpack:///src/actions.spec.js:9:4518)
+</failure>
+  </testcase>
+  <testcase name="Validate actions (these are functions that dispatch actions) should navigate (to profile, main, or landing)" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate actions (these are functions that dispatch actions)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:6405:184 &lt;- webpack:///src/actions.spec.js:9:4964)
+</failure>
+  </testcase>
+  <testcase name="Validate Article actions should fetch articles (mocked request)" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate Article actions">
+    <failure type="">TypeError: initArticles is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:46071:292 &lt;- webpack:///src/components/article/articleActions.spec.js:9:2572)
+</failure>
+  </testcase>
+  <testcase name="ArticlesView (component tests) should render articles" time="0.039" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).ArticlesView (component tests)"/>
+  <testcase name="ArticlesView (component tests) should dispatch actions to create a new article" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).ArticlesView (component tests)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:46115:97 &lt;- webpack:///src/components/article/articlesView.spec.js:9:3401)
+</failure>
+  </testcase>
+  <testcase name="Validate Authentication (involves mocked requests) should log in a user" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate Authentication (involves mocked requests)">
+    <failure type="">TypeError: loginAction is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102452:415 &lt;- webpack:///src/components/auth/authActions.spec.js:9:2808)
+</failure>
+  </testcase>
+  <testcase name="Validate Authentication (involves mocked requests) should not log in an invalid user" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate Authentication (involves mocked requests)">
+    <failure type="">TypeError: loginAction is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102456:383 &lt;- webpack:///src/components/auth/authActions.spec.js:9:3784)
+</failure>
+  </testcase>
+  <testcase name="Validate Authentication (involves mocked requests) should log out a user (state should be cleared)" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate Authentication (involves mocked requests)">
+    <failure type="">TypeError: logoutAction is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102460:282 &lt;- webpack:///src/components/auth/authActions.spec.js:9:4434)
+</failure>
+  </testcase>
+  <testcase name="Validate Profile actions (mocked requests) should fetch the user's proile information" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate Profile actions (mocked requests)">
+    <failure type="">TypeError: initProfile is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102500:995 &lt;- webpack:///src/components/profile/profileActions.spec.js:9:3237)
+</failure>
+  </testcase>
+  <testcase name="Validate Profile actions (mocked requests) should update headline" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate Profile actions (mocked requests)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102504:293 &lt;- webpack:///src/components/profile/profileActions.spec.js:9:3884)
+</failure>
+  </testcase>
+  <testcase name="Validate reducer (no fetch requests here) should initialize state" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate reducer (no fetch requests here)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102541:97 &lt;- webpack:///src/reducers.spec.js:9:2275)
+</failure>
+  </testcase>
+  <testcase name="Validate reducer (no fetch requests here) should state success (for displaying success message to user)" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate reducer (no fetch requests here)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102543:194 &lt;- webpack:///src/reducers.spec.js:9:2709)
+</failure>
+  </testcase>
+  <testcase name="Validate reducer (no fetch requests here) should state success (for displaying success message to user)" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate reducer (no fetch requests here)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102545:191 &lt;- webpack:///src/reducers.spec.js:9:3161)
+</failure>
+  </testcase>
+  <testcase name="Validate reducer (no fetch requests here) should set the articles" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate reducer (no fetch requests here)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102547:294 &lt;- webpack:///src/reducers.spec.js:9:3666)
+</failure>
+  </testcase>
+  <testcase name="Validate reducer (no fetch requests here) should filter displayed articles by the search keyword" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_11_6).Validate reducer (no fetch requests here)">
+    <failure type="">TypeError: Reducer is not a function
+    at Context.&lt;anonymous&gt; (/Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/tests.webpack.js:102549:361 &lt;- webpack:///src/reducers.spec.js:9:4347)
+</failure>
+  </testcase>
+  <system-out>
+    <![CDATA[Chrome 56.0.2924 (Mac OS X 10.11.6) LOG: '[line: 31][object Object]'
+,Chrome 56.0.2924 (Mac OS X 10.11.6) ERROR: 'Warning: Each child in an array or iterator should have a unique "key" prop. Check the top-level render call using <table>. See https://fb.me/react-warning-keys for more information.
+    in div'
+,Chrome 56.0.2924 (Mac OS X 10.11.6) LOG: '[line: 35][object Object]'
+,Chrome 56.0.2924 (Mac OS X 10.11.6) LOG: '[53]'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
