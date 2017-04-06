@@ -1,0 +1,26 @@
+{
+   
+    "followers": [
+        
+        {
+            "id": 0,
+            "picture":"images/1.jpg",
+            "name":"Brenda",
+            "status":"I'm a good baby. I sleep early every day"
+        },
+
+        {
+            "id": 1,
+            "picture":"images/4.jpg",
+            "name":"Haoyuan",
+            "status":"I have two longest legs in the world"
+        },
+
+        {
+            "id": 2,
+            "picture":"images/2.jpg",
+            "name":"Stone",
+            "status":"I'm still young"
+        }
+    ]
+}

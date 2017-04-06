@@ -1,0 +1,16 @@
+{
+    "location": "landingPage",
+    "regErrMsg": "",
+    "logErrMsg": "",
+    "updateMsg": "",
+    "user": {
+        "name": "Evita",
+        "picture": "images/evita.jpg",
+        "status": "default",
+        "email": "ab@ba.com",
+        "phoneNum": "123-456-7890",
+        "Bday": "1990-01-01",
+        "zipCode": "12345",
+        "password": "abc123"
+    }
+}
