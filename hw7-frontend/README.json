@@ -1,4 +1,5 @@
 {
   "netid": "yy55",
-   "frontend": "vitaevita.surge.sh",
+   "backend": "https://protected-anchorage-77582.herokuapp.com",
+   "frontend": "vitaevita2.surge.sh"
 }

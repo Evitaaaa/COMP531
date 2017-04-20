@@ -20,6 +20,7 @@ export function init(){
         }
         const avatar = resource('GET', 'avatars')
         .then((response) => user.picture = response.avatars[0].avatar)
+        
         const headline = resource('GET', 'headlines')
         .then((response) => {
             user.status = response.headlines[0].headline
@@ -42,7 +43,9 @@ export function init(){
         Promise.all([avatar, headline, email, zipCode, Bday] ).then(() => {
             dispatch({type: 'LOG_IN', username: user.name})
             dispatch({type:'INIT_USER', user: user})
-        })    
+        }).catch((err) => {
+            console.log('err promise')
+        })
 
     }
 }
