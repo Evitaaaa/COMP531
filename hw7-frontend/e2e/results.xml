@@ -1,0 +1,19 @@
+
+> starter@1.0.0 e2e:base /Users/Evita/Desktop/Evita/subjects/COMP531 Web Development/COMP531/hw5/frontend
+> mocha --opts e2e/mocha.opts e2e/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="13" failures="0" errors="0" skipped="0" timestamp="Thu, 06 Apr 2017 02:19:03 GMT" time="32.701">
+<testcase classname="Test frontend application" name="should show the register message" time="2.012"/>
+<testcase classname=" Test frontend application" name="should log in as test user" time="0.546"/>
+<testcase classname=" Test frontend application" name="should create new article" time="2.279"/>
+<testcase classname=" Test frontend application" name="should edit an article" time="1.708"/>
+<testcase classname=" Test frontend application" name="should update headline" time="2.491"/>
+<testcase classname=" Test frontend application" name="should add follower" time="2.261"/>
+<testcase classname=" Test frontend application" name="should remove a follower" time="1.092"/>
+<testcase classname=" Test frontend application" name="should search by keywords" time="1.853"/>
+<testcase classname=" Test frontend application" name="go to profile" time="0.593"/>
+<testcase classname=" Test frontend application" name="should update user email and verify" time="4.324"/>
+<testcase classname=" Test frontend application" name="should update user zipcode and verify" time="4.061"/>
+<testcase classname=" Test frontend application" name="should update user password and verify" time="3.62"/>
+<testcase classname="shutdown" name="now" time="0.119"/>
+</testsuite>
