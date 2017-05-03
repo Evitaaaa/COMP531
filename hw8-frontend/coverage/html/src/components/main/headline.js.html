@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/main/headline.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/main/</a> headline.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.14% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>12/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.94% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/17</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import {connect} from 'react-redux'
+import { updateHeadline } from '../profile/profileActions'
+import { resource } from '../../actions'
+let status
+const Headline = <span class="fstat-no" title="function not covered" >({<span class="cstat-no" title="statement not covered" >user, dispatch}) =&gt;{</span></span>
+    return(
+<span class="cstat-no" title="statement not covered" >        &lt;div className='headline'&gt;</span>
+            &lt;img src={user.picture}
+                alt='image' className='img-responsive center-block profileImage'/&gt;
+            &lt;label className='displayName'&gt; {user.name} &lt;/label&gt;
+            &lt;div id='status' className='status'&gt; {user.status}&lt;/div&gt;
+                &lt;input id='newStatus' type='text' className="form-control" placeholder='New Status' 
+                    aria-describedby="pencil-addOn"  ref = {<span class="fstat-no" title="function not covered" >(node) =&gt; <span class="cstat-no" title="statement not covered" >status = node}/&gt;</span></span>
+            &lt;div&gt;
+            &lt;button type='button' className='btn' onClick={<span class="fstat-no" title="function not covered" >() =&gt; </span>
+                {updateStatus(<span class="cstat-no" title="statement not covered" >dispatch)}}&gt;Update Status&lt;/button&gt;</span>
+            &lt;/div&gt;
+        &lt;/div&gt;
+    )
+}
+&nbsp;
+const updateStatus = <span class="fstat-no" title="function not covered" >(dispatch) =&gt;{</span>
+    if(<span class="cstat-no" title="statement not covered" >status.value != '' ){</span>
+        resource(<span class="cstat-no" title="statement not covered" >'PUT', 'headline', {headline: status.value})</span>
+        .then(<span class="fstat-no" title="function not covered" >(response) =&gt;{</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >{type: 'UPDATE_STATUS', name : response.username, status:response.headline})</span>
+        })
+        status.<span class="cstat-no" title="statement not covered" >value = ''</span>
+    }
+}
+&nbsp;
+export default connect(
+<span class="fstat-no" title="function not covered" >    (state) =&gt; {</span>
+        return <span class="cstat-no" title="statement not covered" >{</span>
+            user: state.user
+        }
+    },
+    null
+&nbsp;
+)(Headline)
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 24 2017 22:43:25 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
